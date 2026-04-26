@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Latein-Konjugationstrainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+  <header class="header">
+    <h1>Latein-Trainer</h1>
+    <p>Konjugationen üben</p>
+  </header>
+
+  <section class="card">
+    <h2>Auswahl</h2>
+
+    <div class="group">
+      <h3>Modus</h3>
+      <div class="chips">
+        <label><input type="checkbox" value="indikativ" checked> <span>Indikativ</span></label>
+        <label><input type="checkbox" value="konjunktiv" checked> <span>Konjunktiv</span></label>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>Tempus</h3>
+      <div class="chips">
+        <label><input type="checkbox" value="praesens" checked> <span>Präsens</span></label>
+        <label><input type="checkbox" value="imperfekt" checked> <span>Imperfekt</span></label>
+        <label><input type="checkbox" value="perfekt" checked> <span>Perfekt</span></label>
+        <label><input type="checkbox" value="plusquamperfekt" checked> <span>Plusquamperfekt</span></label>
+        <label><input type="checkbox" value="futur1" checked> <span>Futur I</span></label>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>Genus verbi</h3>
+      <div class="chips">
+        <label><input type="checkbox" value="aktiv" checked> <span>Aktiv</span></label>
+        <label><input type="checkbox" value="passiv" checked> <span>Passiv</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="practice-card">
+    <button class="primary" onclick="generate()">Neue Aufgabe</button>
+
+    <div id="task" class="task">Tippe auf „Neue Aufgabe“.</div>
+
+    <input id="answer" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Antwort eingeben">
+
+    <button class="secondary" onclick="check()">Prüfen</button>
+
+    <div id="feedback" class="feedback"></div>
+
+    <div class="score">
+      <span>Punkte: <strong id="score">0</strong></span>
+      <span>Aufgaben: <strong id="total">0</strong></span>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
