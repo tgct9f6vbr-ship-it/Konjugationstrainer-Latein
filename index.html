@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Konjugationstrainer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Konjugationstrainer</h1>
+
+  <section class="card">
+
+    <h3>Verb hinzufügen</h3>
+
+    <input id="newVerb" placeholder="z. B. monere">
+    <button onclick="addVerb()">Speichern</button>
+
+    <p class="hint">
+      Hinweis: Das Verb muss im System vorhanden sein.
+    </p>
+
+  </section>
+
+  <section class="card">
+
+    <h3>Deine Verben</h3>
+    <div id="verbList"></div>
+
+  </section>
+
+  <button class="mainbtn" onclick="generate()">Neue Aufgabe</button>
+
+  <div class="task" id="task">Starten...</div>
+
+  <input id="answer" placeholder="Antwort eingeben">
+
+  <button onclick="check()">Prüfen</button>
+
+  <div id="feedback"></div>
+
+  <div class="score">Punkte: <span id="score">0</span></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
